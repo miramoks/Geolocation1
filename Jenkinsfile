@@ -1,4 +1,4 @@
-Pipeline {
+pipeline {
     agent any
     tools {
   maven 'M2_HOME'
@@ -8,7 +8,7 @@ Pipeline {
 }
 
     stages {
-        stage('maven package') {
+        stage('Build') {
             steps {
                 sh 'mvn clean'
                 sh 'mvn install'
@@ -21,15 +21,15 @@ Pipeline {
                 
             }
         }
-        stage('test') {
+        stage('Deploy') {
             steps {
-                echo 'test'
+                echo 'Deploy step'
                 
             }
         }
-        stage('deploy') {
+        stage('Docker') {
             steps {
-                echo 'eploy'
+                echo 'Image step'
                 
             }
         }
