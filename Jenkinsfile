@@ -1,4 +1,4 @@
-Pipeline {
+pipeline {
     agent any
     tools {
   maven 'M2_HOME'
@@ -29,7 +29,7 @@ Pipeline {
         }
         stage('deploy') {
             steps {
-                echo 'eploy'
+                echo 'deploy'
                 
             }
         }
